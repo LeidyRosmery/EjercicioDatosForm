@@ -5,20 +5,39 @@
 	<title>Document</title>
 </head>
 <body>
-
-	<form id="frm1">
-		Nombre: <input type="text" name="name" id="name"><br>
-		Mail: <input type="text" name="email" id="email"><br>
+	<form id="frm1" onsubmit="return false">
+			<fieldset style="width:350px">
+				<legend> <strong> Datos a ingresar </strong></legend>
+					<table>
+						<tr>
+							<td>
+								Nombre:
+							</td>
+							<td>
+								<input type="text" name="name" id="name" required=""><br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+									Mail:
+							</td>
+							<td>
+								<input type="text" name="email" id="email" required=""><br>
+							</td>
+						</tr>
+						<tr >
+							<td >
+								<button onclick="validaCampos();">Mostrar</button>
+							</td>
+						</tr>
+					</table>
+			</fieldset>
 	</form>
-	<button onclick="myFunction()">Mostrar</button>
-
-	<p id="mostrarNombre"></p>
-	<p id="mostrarMail"></p>
-
-	<script>
-		function myFunction() {
-
-		}
-	</script>
+	<fieldset style="width:350px">
+		<legend>	<strong> Resultados del Formulario </strong></legend>
+			<p id="mostrarNombre"></p>
+			<p id="mostrarMail"></p>
+	</fieldset>
+	<script src="js/main.js"> </script>
 </body>
 </html>
